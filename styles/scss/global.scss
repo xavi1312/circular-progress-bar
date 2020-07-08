@@ -14,9 +14,18 @@ $languages: (
     60,
   ),
 );
+$stroke-dashoffset: 440;
+
+//  PLACEHOLDERS
+%absolute-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 // MAPS
 @function calc-stroke-dashoffset($percent) {
-  @return 440 - (440 * $percent) / 100;
+  @return $stroke-dashoffset - ($stroke-dashoffset * $percent) / 100;
 }
 
 // GLOBAL STYLES
